@@ -32,6 +32,7 @@ section .bg {
     /* Ensures the image covers the section */
     transform: translate(-50%, -50%);
     /* Centers the image */
+    pointer-events: none;
 }
 
 section .grass {
@@ -56,6 +57,7 @@ section .girl {
     max-height: 100%;
     animation: moveGirl 5s linear infinite;
     /* Animation applied */
+    pointer-events: none;
 }
 
 @keyframes moveGirl {
@@ -68,4 +70,72 @@ section .girl {
         left: 110%;
         /* End outside the right edge */
     }
+}
+
+.login {
+    position: relative;
+    z-index: 10;
+    width: 500px;
+    margin: auto;
+    top: 40%;
+    transform: translateY(-50%);
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+}
+
+.login h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fbb03b;
+}
+
+.input {
+    margin-bottom: 15px;
+}
+
+.input input[type="text"],
+.input input[type="password"],
+.input input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input input[type="submit"] {
+    position: relative;
+    background: #fbb03b;
+    color: white;
+    border: none;
+    outline: none;
+    font: 1.5em;
+    font-weight: 500;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.input input[type="submit"]:hover {
+    background: rgba(235, 145, 28, 0.9);
+    /* Darker blue on hover */
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.group a {
+    text-decoration: none;
+    color: #b87a16;
+}
+
+.group a:hover {
+    text-decoration: underline;
 }
