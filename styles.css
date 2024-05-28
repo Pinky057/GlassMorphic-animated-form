@@ -36,10 +36,10 @@ section {
 
 .grass {
     position: absolute;
-    bottom: 0;
+    bottom: -15%;
     height: 40%;
     /* Adjust as needed */
-    object-fit: contain;
+    object-fit: cover;
     pointer-events: none;
 }
 
@@ -49,13 +49,6 @@ section {
     z-index: 1;
 }
 
-.grass.left {
-    bottom: -25px;
-    left: 0;
-    width: 25%;
-    /* Adjust width as needed */
-    z-index: 2;
-}
 
 .grass.right {
     bottom: -40px;
@@ -158,7 +151,7 @@ button:hover {
 
 .group a {
     text-decoration: none;
-    color: #fbb03b;
+    color: #b87a16;
     font-weight: bold;
 }
 
