@@ -34,7 +34,7 @@ section {
     pointer-events: none;
 }
 
-.grass {
+/* .grass {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -43,7 +43,39 @@ section {
     object-fit: contain;
     z-index: 1;
     pointer-events: none;
+} */
+.grass {
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+    /* Adjust as needed */
+    object-fit: contain;
+    pointer-events: none;
 }
+
+.grass.center {
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.grass.left {
+    bottom: -25px;
+    left: 0;
+    width: 25%;
+    /* Adjust width as needed */
+    z-index: 2;
+}
+
+.grass.right {
+    bottom: -40px;
+    right: -8%;
+    width: 40%;
+    /* Adjust width as needed */
+    z-index: 2;
+}
+
+
 
 .girl {
     position: absolute;
@@ -74,27 +106,24 @@ section {
 .login {
     position: relative;
     z-index: 10;
-    width: 300px;
+    width: 500px;
     margin: auto;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    /* Semi-transparent white */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    /* White border with some transparency */
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    /* Soft shadow */
-    backdrop-filter: blur(10px);
-    /* Background blur */
-    -webkit-backdrop-filter: blur(10px);
-    /* Background blur for Safari */
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
 }
 
 .login h2 {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fbb03b;
 }
 
 .input {
@@ -105,26 +134,27 @@ section {
 .input input[type="password"],
 .input input[type="submit"] {
     width: 100%;
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    /* White border with some transparency */
+    padding: 15px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    /* Semi-transparent white background */
-    color: #fff;
     outline: none;
 }
 
 .input input[type="submit"] {
-    background: rgba(0, 123, 255, 0.7);
-    /* Semi-transparent blue */
+    position: relative;
+    background: #fbb03b;
     color: white;
+    margin-top: 20px;
     border: none;
+    outline: none;
+    font: 1.5em;
+    font-weight: 500;
+    transition: 0.5s;
     cursor: pointer;
 }
 
 .input input[type="submit"]:hover {
-    background: rgba(0, 123, 255, 0.9);
+    background: rgba(235, 145, 28, 0.9);
     /* Darker blue on hover */
 }
 
@@ -136,7 +166,7 @@ section {
 
 .group a {
     text-decoration: none;
-    color: #007bff;
+    color: #b87a16;
 }
 
 .group a:hover {
